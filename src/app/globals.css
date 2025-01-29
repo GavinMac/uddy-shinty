@@ -3,19 +3,226 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e4e4e4;
+  --foreground: #111111;
+  --backgroundRgba: 228, 228, 228;
+  --foregroundRgba: 17, 17, 17;
+  --uddypurple: #71001c;
+  --uddyyellow: #ffd527;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #111111;
+    --foreground: #e4e4e4;
+    --backgroundRgba: 17, 17, 17;
+    --foregroundRgba: 228, 228, 228;
   }
+} */
+
+/* For light mode */
+:root[data-mantine-color-scheme="light"] {
+  --mantine-color-body: var(--background) !important;
+  --mantine-color-text: var(--foreground) !important;
+}
+
+/* For dark mode */
+:root[data-mantine-color-scheme="dark"] {
+  --mantine-color-body: var(--background) !important;
+  --mantine-color-text: var(--foreground) !important;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+footer{
+  background-color: var(--uddypurple);
+  width: 100%;
+  height: auto;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  margin-top: 100%;
+  box-shadow: 0 0 3px -1px var(--foreground);
+}
+
+nav{
+  color: white;
+  display: grid; 
+  grid-template-columns: 0.5fr 2fr 0.5fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."; 
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background-color: var(--uddypurple);
+  z-index: 9999;
+  box-shadow: 0 0 15px -3px var(--foreground);
+}
+
+.navLogo{
+  padding: 5px 10px;
+  width: auto;
+  height: 64px;
+}
+
+.navLinks{
+  display: flex;
+  flex-flow: row;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoBox{
+  display: flex;
+  flex-flow: column;
+  gap: 24;
+  background-color: rgba(var(--foregroundRgba), 0.5);
+  width: 100%;
+  height: auto;
+  margin: 25px 0;
+  padding: 5% 10%;
+  text-align: center;
+}
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 0 15px -3px var(--foreground);
+}
+
+.heroLogoImg{
+  width: 100%;
+  height: auto;
+}
+
+.heroContent{
+  position: absolute;
+  top: 25%;
+  display: flex;
+  flex-flow: column;
+  gap: 24;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heroBgImg{
+  background-image: url("/steppsPitch.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.25;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.actionShotImg-left{
+  width: 256px;
+  height: 256px;
+  object-fit: contain;
+
+  position: absolute;
+
+  animation:  slideFromLeft 1.5s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+
+  transition: all 0.2s;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.actionShotImg-right{
+  width: 256px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 512px;
+
+  position: absolute;
+
+  animation:  slideFromRight 1.5s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+
+  transition: all 0.2s;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@keyframes slideFromLeft{
+  from{
+    left: -100%;
+  }
+  to{
+    left: 5%;
+  }
+}
+
+@-moz-keyframes slideFromLeft{
+  from{
+    left: -100%;
+  }
+  to{
+    left: 5%;
+  }
+}
+
+@-webkit-keyframes slideFromLeft{
+  from{
+    left: -100%;
+  }
+  to{
+    left: 10%;
+  }
+}
+
+
+@keyframes slideFromRight{
+  from{
+    right: -100%;
+  }
+  to{
+    right: 5%;
+  }
+}
+
+@-moz-keyframes slideFromRight{
+  from{
+    right: -100%;
+  }
+  to{
+    right: 5%;
+  }
+}
+
+@-webkit-keyframes slideFromRight{
+  from{
+    right: -100%;
+  }
+  to{
+    right: 10%;
+  }
 }

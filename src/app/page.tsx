@@ -1,101 +1,77 @@
-import Image from "next/image";
+import { Image, Text, Title } from "@mantine/core";
+import ActionShotScroller from "./components/actionShotScroller";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className="flex flex-col gap-8 items-center w-full h-screen font-[family-name:var(--font-geist-sans)]">
+      <div className="hero">
+        <div className="heroBgImg"></div>
+        <div className="heroContent">
+          <div>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/UddyShintyBadgeOutline.png"
+              alt="Uddingston Shinty Badge"
+              width={256}
+              height={256}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+          </div>
+          <Title>
+              Text Here
+            </Title>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+      <div className="flex flex-col w-full h-full">
+      <ActionShotScroller img="/actionShots/player3.png" alt="player3.png" position="left"/>
+        <div className="mx-[10%]">   
+          <div className="infoBox">
+            <Text>
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Consequat
+              nisl iaculis vivamus lacus; sagittis ex. Est est in semper donec
+              sit sem penatibus. Tristique feugiat himenaeos faucibus feugiat
+              luctus adipiscing tempor nulla. Fringilla magna luctus fermentum
+              hac aptent nisl sociosqu rutrum? Est mauris nullam vitae lectus
+              curabitur potenti. Dolor ex aptent vivamus nulla lacus tortor
+              porttitor quam pulvinar.
+            </Text>
+
+            <Text>
+              Vulputate interdum per taciti vitae sed semper; cubilia commodo.
+              Mollis iaculis sem phasellus netus nullam lectus. Libero est donec
+              facilisis ligula; inceptos et aliquet erat scelerisque. Justo nunc
+              amet taciti vel consectetur id torquent a. Aptent ante nisl ante
+              habitasse, aenean tristique inceptos. Hac tempor maecenas a mauris
+              leo placerat sagittis donec.
+            </Text>
+          </div>
+
+          <div className="infoBox">
+            <Text>
+              Quis malesuada odio efficitur purus accumsan vitae euismod
+              gravida. Penatibus arcu risus senectus id nisi maximus. Dictum
+              vitae ipsum, condimentum iaculis phasellus eu. Mi faucibus
+              vestibulum habitasse, feugiat ligula gravida efficitur enim
+              ridiculus. Odio montes quam duis, urna ac varius. Dapibus interdum
+              montes faucibus pharetra quis. Congue at himenaeos leo pulvinar
+              senectus, pellentesque natoque ridiculus elementum. Dolor diam
+              massa aptent sagittis mi consequat bibendum. Metus dui nam fusce
+              proin eu.
+            </Text>
+
+            <Text>
+              Felis mattis feugiat aliquam molestie consequat himenaeos?
+              Suspendisse mi proin etiam magnis nullam pulvinar. Consequat
+              cubilia eros molestie porta tincidunt pretium mauris ornare lacus.
+              Convallis primis libero nam urna sagittis cubilia. Vel sagittis
+              est mattis nostra mus leo imperdiet odio. Arcu aliquam curae per
+              lectus per mauris. Viverra congue tincidunt netus auctor
+              suspendisse. Parturient lobortis tellus cubilia, amet porttitor
+              varius. Eu mus netus platea ipsum curae mus sed sem.
+            </Text>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }

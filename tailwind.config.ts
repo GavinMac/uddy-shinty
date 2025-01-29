@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        uddypurple: "var(--uddypurple)",
+        uddyyellow: "var(--uddyyellow)",
+        scroll: "var(--scroll)"
       },
     },
   },
